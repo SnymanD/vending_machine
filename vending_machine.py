@@ -42,7 +42,7 @@ class VendingMachine:
         self.balance = 0.0
 
     def insert_money(self, amount):
-        # 🔴 FIX: Prevent R0 or negative amounts
+        # Prevent R0 or negative amounts
         if amount <= 0:
             print("Invalid amount. Please insert money greater than R0.")
             return False
@@ -155,7 +155,7 @@ while True:
     try:
         amount = float(input("Insert money (R): "))
 
-        # 🔴 If invalid money, restart loop
+        # If invalid money, restart loop
         if not machine.insert_money(amount):
             continue
 
